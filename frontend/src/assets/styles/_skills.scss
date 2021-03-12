@@ -1,0 +1,66 @@
+section.skills {
+  // border-bottom: 1px solid;
+
+
+  .professional-skills-section {
+      margin-top: 20px;
+      .professional-skill {
+        padding: 10px;
+        border-radius: 2px;
+        margin: 10px;
+        transition: all 0.5s ease;
+          i {
+              font-size: 22px;
+              color: #29a19c;
+              margin-right: 8px;
+          }
+          &:hover {
+              background-color: #29a19c;
+              color:#303740 ;
+          }
+          &:hover i {
+            color:#303740 ;
+        }
+      }
+
+      .hire-me-btn
+      {
+        margin: 20px 0;
+       .btn {
+          color: #303740 !important;
+      }
+    }
+  }
+
+  .technical-skills {
+    // display: flex;
+
+    .skill-box {
+    
+      padding: 5px 22px;;
+      cursor: pointer;
+      text-align: center;
+      // width: 50px;
+      height: 100px;
+      display: inline-table;
+  
+      // margin-right: 10px;
+      transition: all 200ms ease-in-out;
+      i{
+        color: #5a6677;
+        font-size: 30px;
+        transition: all 200ms ease-in-out;
+
+      }
+
+      .skill-name {
+        font-size: 12px;
+        margin-top: 8px;
+      }
+      &:hover i {
+        color: #29a19c;
+      }
+    }
+  }
+}
+  

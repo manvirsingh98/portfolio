@@ -1,0 +1,45 @@
+// expe
+
+.experience {
+    //  border-bottom: 1px solid;
+   
+    .card {
+      // padding: 25px 10px;
+      margin: 20px;
+      .card-title {
+        font-size: 1.6rem;
+        margin-bottom: 0;
+      }
+      .card-subtitle {
+        color: #29a19c;
+        font-size: 1.1rem;;
+      }
+      &:hover .card-subtitle, &:hover ul li {
+        color: #303740;
+      }
+      ul li {
+        padding: 10px 0;
+      }
+    }
+
+    .technology-box {
+  padding: 8px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+
+    }
+
+    .technology {
+      background: #29a19c;
+      border-radius: 5px;
+      color: #303740;
+      margin: 3px;
+      display: inline-block;
+    // text-align: center;
+    padding: 5px 12px !important;
+    // flex-grow: 1;
+    }
+
+   
+}

@@ -1,0 +1,47 @@
+//about
+.about {
+    // border-bottom: 1px solid;
+  
+  // .about-me-title {
+  //   font-family: "Potta One", cursive;
+
+  // }
+  .social-profiles {
+    display: flex;
+    .social-profile-icon {
+      width: 50px;
+      height: 50px;
+      background-color: #303740;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: all 0.1s ease;
+
+      // &:hover {
+      //     width: 55px;
+      //     height: 55px;
+      // }
+      i {
+        color: #5a6677;
+        transition: all 0.5s ease;
+        font-size: 25px;
+      }
+
+      &:hover i {
+        color: #29a19c;
+      }
+    }
+
+    @media (min-width: 576px){
+
+  
+      .card-deck .card {
+
+        margin-bottom: 20px;
+      }  }
+  }
+}
+

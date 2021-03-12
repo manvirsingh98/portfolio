@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Alert } from "react-bootstrap";
-import Loader from "../components/Loader";
 
 import { login } from "../actions/userActions";
 
@@ -16,7 +15,7 @@ const LoginScreen = ({ history }) => {
 
   useEffect(() => {
     if (userInfo) {
-      history.push("/dashboard");
+      history.push("/dashboard/heroForm");
     }
   }, [userInfo, history]);
 
@@ -31,7 +30,7 @@ const LoginScreen = ({ history }) => {
       <div className="login-form shadow">
         <h1 className="text-center mb-4">Login</h1>
         {error && <Alert variant="danger">{error}</Alert>}
-        {loading && <Loader />}
+        {loading && <h6>loading...</h6>}
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="exampleInputEmail1">Email address</label>
