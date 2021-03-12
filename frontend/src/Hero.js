@@ -27,7 +27,7 @@ const HeroSection = () => {
                 Web Developer
               </span>
             </h1>
-            <p className="my-4 mr-5">{portfolio && portfolio.summary}</p>
+            <p className="my-4">{portfolio && portfolio.summary}</p>
             <div className="cta-btns">
               <button className="btn btn-md btn-secondary mr-4">
                 Download my resume

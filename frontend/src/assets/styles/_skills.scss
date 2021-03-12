@@ -3,11 +3,13 @@ section.skills {
 
 
   .professional-skills-section {
-      margin-top: 20px;
+      // margin-top: 20px;
+      padding: 0 10px 10px 10px;
       .professional-skill {
-        padding: 10px;
         border-radius: 2px;
-        margin: 10px;
+        padding: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
         transition: all 0.5s ease;
           i {
               font-size: 22px;
@@ -33,16 +35,14 @@ section.skills {
   }
 
   .technical-skills {
-    // display: flex;
-
+     display: flex;
+    flex-wrap: wrap;
     .skill-box {
     
-      padding: 5px 22px;;
       cursor: pointer;
       text-align: center;
-      // width: 50px;
+      width: 100px;
       height: 100px;
-      display: inline-table;
   
       // margin-right: 10px;
       transition: all 200ms ease-in-out;

@@ -39,21 +39,13 @@ const SkillSection = () => {
               >
                 Professional & Technical Skills
               </h4>
-              <p
-                className="my-4 mr-5"
-                data-aos="fade-right"
-                data-aos-duration="800"
-              >
+              <p className="my-4" data-aos="fade-right" data-aos-duration="800">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor.
               </p>
-              <p
-                className="my-4 mr-5"
-                data-aos="fade-right"
-                data-aos-duration="800"
-              >
+              <p className="my-4" data-aos="fade-right" data-aos-duration="800">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -69,7 +61,7 @@ const SkillSection = () => {
                 {skills.map((skill, idx) => {
                   if (skill.category === "professional") {
                     return (
-                      <div key={idx} className="professional-skill d-flex ml-2">
+                      <div key={idx} className="professional-skill">
                         <div key={idx} className="skill-box">
                           <i className={`${skill.icon}`} />{" "}
                           <span>{skill.name}</span>
