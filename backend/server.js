@@ -2,6 +2,7 @@ import path from "path";
 import express from "express";
 import dotenv from "dotenv";
 import colors from "colors";
+import morgan from "morgan";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
 import connectDB from "./config/db.js";
@@ -26,7 +27,7 @@ app.use("/api/portfolio", portfolioRoutes);
 
 const __dirname = path.resolve();
 
-if ((process.env.NODE_ENV = "production")) {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/build")));
 
   app.get("*", (req, res) =>
