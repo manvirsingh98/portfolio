@@ -18,8 +18,9 @@ const HeroSection = () => {
     <div id="hero" className="d-flex align-items-center justify-content-center">
       <div className="container" data-aos="zoom-in" data-aos-delay="100">
         <div className="row">
-          <div className="col-md-12 text-center">
-            <h1>
+          <div className="col-md-6">
+            <h5>Hi I Am Manvir,</h5>
+            <h1 className="title">
               {portfolio && portfolio.position}
               <span
                 style={{ color: "#29a19c", fontFamily: "Potta One, cursive" }}
@@ -29,12 +30,8 @@ const HeroSection = () => {
             </h1>
             <p className="my-4">{portfolio && portfolio.summary}</p>
             <div className="cta-btns">
-              <button className="btn btn-md btn-secondary mr-4">
-                Download my resume
-              </button>
-              <button className="btn btn-md btn-secondary mr-4">
-                See my work
-              </button>
+              <button className="btn btn-md btn-secondary mr-4">Resume</button>
+              <button className="btn btn-md btn-secondary mr-4">Work</button>
             </div>
           </div>
         </div>

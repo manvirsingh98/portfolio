@@ -37,7 +37,7 @@ const Header = () => {
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto">
+          <Nav>
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">About</Nav.Link>
             <Nav.Link href="#link">Skills</Nav.Link>
@@ -48,7 +48,7 @@ const Header = () => {
             <Nav.Link href="#link">Qualifcation</Nav.Link>
             <Nav.Link href="#link">Work</Nav.Link>
 
-            {userInfo && (
+            {/* {userInfo && (
               <NavDropdown
                 className="ml-auto"
                 title={userInfo.name}
@@ -61,7 +61,7 @@ const Header = () => {
                   Logout
                 </NavDropdown.Item>
               </NavDropdown>
-            )}
+            )} */}
 
             {/* {userInfo && userInfo.isAdmin && (
               <NavDropdown title="Admin" id="adminmenu">

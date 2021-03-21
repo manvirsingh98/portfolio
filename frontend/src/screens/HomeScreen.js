@@ -19,6 +19,14 @@ const HomeScreen = () => {
 
   return (
     <>
+      <div className="animation-bg">
+        <div class="slider-thumb"></div>
+        <div class="slider-thumb"></div>
+        <div class="slider-thumb"></div>
+        <div class="slider-thumb"></div>
+        <div class="slider-thumb"></div>
+        <div class="slider-thumb"></div>
+      </div>
       <main id="main">
         <Hero />
         <About />

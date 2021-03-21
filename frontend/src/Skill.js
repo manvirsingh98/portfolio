@@ -77,9 +77,7 @@ const SkillSection = () => {
                 data-aos="fade-right"
                 data-aos-duration="1000"
               >
-                <button className="btn btn-md btn-secondary px-5">
-                  Hire me
-                </button>
+                <button className="btn btn-md btn-secondary ">Hire me</button>
               </div>
             </div>
           </Col>

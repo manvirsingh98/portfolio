@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Form, Col } from "react-bootstrap";
 
 const ContactSection = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setlastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const data = {
+      firstName,
+      lastName,
+      email,
+      message,
+    };
+
+    console.log(data);
+  };
+
   return (
     //    <!-- ======= Contact Section ======= -
     <section id="contact" className="contact">
@@ -11,7 +29,7 @@ const ContactSection = () => {
       <Container>
         <div className="contact-form">
           <h3 className="mb-4">Fill all the fields of form</h3>
-          <form>
+          <form onSubmit={handleSubmit}>
             <Form.Row>
               <Form.Group as={Col} controlId="formName">
                 <Form.Label>First Name</Form.Label>
@@ -19,7 +37,8 @@ const ContactSection = () => {
                   type="text"
                   placeholder="Enter your first name"
                   name="firstName"
-                  // onChange={(e) => setCompanyName(e.target.value)}
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                 />
               </Form.Group>
               <Form.Group as={Col} controlId="formName">
@@ -28,7 +47,8 @@ const ContactSection = () => {
                   type="text"
                   placeholder="Enter your last name"
                   name="lastName"
-                  // onChange={(e) => setCompanyName(e.target.value)}
+                  value={lastName}
+                  onChange={(e) => setlastName(e.target.value)}
                 />
               </Form.Group>
             </Form.Row>
@@ -39,7 +59,8 @@ const ContactSection = () => {
                   type="text"
                   placeholder="Enter your email"
                   name="email"
-                  // onChange={(e) => setCompanyName(e.target.value)}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </Form.Group>
             </Form.Row>
@@ -51,7 +72,8 @@ const ContactSection = () => {
                   rows={3}
                   placeholder="Enter message"
                   name="message"
-                  // onChange={(e) => setCompanyName(e.target.value)}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 />
               </Form.Group>
             </Form.Row>

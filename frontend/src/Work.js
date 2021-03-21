@@ -30,21 +30,21 @@ const WorkSection = () => {
           {projectError && <Alert variant="danger">{projectError}</Alert>}
           {projects.map((project, idx) => (
             <Col
-              className="px-0"
+              className="content px-0"
               md={4}
               key={idx}
               data-aos="flip-left"
               data-aos-duration="800"
             >
               <div className="project">
+                <div class="content-overlay"></div>
+
                 <img src={project.image} />
 
-                {/* <Card.Body>
-                  <Card.Title>{project.title}</Card.Title>
-                  <Card.Text>{project.summary}</Card.Text>
-                </Card.Body> */}
-                <div className="project-details">
-                  <h4>{project.title}</h4>
+                <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">{project.title}</h3>
+                  <p class="content-text">{project.summary}</p>
+                  <a>Click to see website</a>
                 </div>
               </div>
             </Col>
