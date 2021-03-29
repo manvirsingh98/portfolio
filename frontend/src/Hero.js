@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-
+import * as Scroll from "react-scroll";
+import { Link } from "react-scroll";
 import { useDispatch, useSelector } from "react-redux";
 import { getPortfolio } from "./actions/portfolioActions";
 
@@ -31,7 +32,17 @@ const HeroSection = () => {
             <p className="my-4">{portfolio && portfolio.summary}</p>
             <div className="cta-btns">
               <button className="btn btn-md btn-secondary mr-4">Resume</button>
-              <button className="btn btn-md btn-secondary mr-4">Work</button>
+              <Link
+                className="btn btn-md btn-secondary mr-4"
+                activeClass="active"
+                to="work"
+                spy={true}
+                smooth={true}
+                duration={800}
+                offset={-50}
+              >
+                Work
+              </Link>
             </div>
           </div>
         </div>

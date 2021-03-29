@@ -34,7 +34,7 @@ const HomeScreen = () => {
         <Experience />
         <Qualification />
         <Work />
-        <Contact />
+        {/* <Contact /> */}
       </main>
       <Footer />
     </>

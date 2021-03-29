@@ -5,6 +5,10 @@
   font-size: 25px;
   color: #29a19c;
 }
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color:#fff;
+}
 .navbar-light .navbar-nav .nav-link {
   color: #fff;
   padding: 10px 30px;
@@ -13,6 +17,7 @@
   border: none;
   display: inline-block;
   position: relative;
+  cursor: pointer;
 
   &:hover {
     color: #fff;

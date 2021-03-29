@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch } from "react-redux";
-
+import * as Scroll from "react-scroll";
+import { Link } from "react-scroll";
 import { useSelector } from "react-redux";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { logout } from "../actions/userActions";
@@ -38,15 +39,70 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">About</Nav.Link>
-            <Nav.Link href="#link">Skills</Nav.Link>
+            <Link
+              className="nav-link"
+              to="hero"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
+            >
+              Home
+            </Link>
+            <Link
+              className="nav-link"
+              // activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
+            >
+              About
+            </Link>
+            <Link
+              className="nav-link"
+              to="skills"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
+            >
+              Skills
+            </Link>
             <LinkContainer className="mx-5" to="/">
               <Navbar.Brand>Portfolio</Navbar.Brand>
             </LinkContainer>
-            <Nav.Link href="#link">Experience</Nav.Link>
-            <Nav.Link href="#link">Qualifcation</Nav.Link>
-            <Nav.Link href="#link">Work</Nav.Link>
+            <Link
+              className="nav-link"
+              to="experience"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
+            >
+              Experience
+            </Link>
+            <Link
+              className="nav-link"
+              to="qualification"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
+            >
+              Qualifcation
+            </Link>
+            <Link
+              className="nav-link"
+              to="work"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-50}
+            >
+              Work
+            </Link>
 
             {/* {userInfo && (
               <NavDropdown

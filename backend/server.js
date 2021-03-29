@@ -26,7 +26,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/portfolio", portfolioRoutes);
 
 const __dirname = path.resolve();
-app.use("/images", express.static(path.join(__dirname, "public", "images")));
+app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/build")));

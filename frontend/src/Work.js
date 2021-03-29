@@ -44,7 +44,7 @@ const WorkSection = () => {
                 <div class="content-details fadeIn-bottom">
                   <h3 class="content-title">{project.title}</h3>
                   <p class="content-text">{project.summary}</p>
-                  <a>Click to see website</a>
+                  <a href={project.url}>Click to see website</a>
                 </div>
               </div>
             </Col>

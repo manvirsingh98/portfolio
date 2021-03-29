@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { listServices } from "./actions/servicesActions";
 import { getSocialProfiles } from "./actions/socialProfilesActions";
 
+import Loader from "./components/Loader";
+
 const About = () => {
   const dispatch = useDispatch();
 
@@ -57,6 +59,8 @@ const About = () => {
       <Container>
         <Row>
           <Col md={6}>
+            {serviceLoading && <Loader />}
+            {serviceError && <h4>{serviceError}</h4>}
             <div
               className="services"
               data-aos="fade-right"
@@ -66,6 +70,8 @@ const About = () => {
             </div>
           </Col>
           <Col md={6}>
+            {loading && <Loader />}
+            {error && <h4>{error}</h4>}
             <div className="about-me pt-3 pl-5">
               <div
                 className="about-me-title mb-5"
@@ -88,22 +94,13 @@ const About = () => {
                 data-aos="fade-right"
                 data-aos-duration="1000"
               >
+                {socialProfilesLoading && <Loader />}
+                {socialProfilesError && <h4>{socialProfilesError}</h4>}
                 {socialProfiles.map((socialProfile, idx) => (
                   <div className="social-profile-icon" key={idx}>
                     <i className={` ${socialProfile.icon}`} />
                   </div>
                 ))}
-                {/* <div className="social-profile-icon"></div>
-                <div className="social-profile-icon"></div>
-                <div className="social-profile-icon">
-                  {/* <i className={`fas ${skill.icon}`} />{" "} */}
-                {/* </div> */}
-                {/* <button className="btn btn-md btn-secondary mr-4">
-                  Download my resume
-                </button>
-                <button className="btn btn-md btn-secondary mr-4">
-                  Download my resume
-                </button> */}
               </div>
             </div>
           </Col>
