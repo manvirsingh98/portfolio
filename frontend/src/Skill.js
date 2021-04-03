@@ -40,16 +40,11 @@ const SkillSection = () => {
                 Professional & Technical Skills
               </h4>
               <p className="my-4" data-aos="fade-right" data-aos-duration="800">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor.
+                In case of neccessity, i am confortable with learning new
+                languages and working with them to complete the project.
               </p>
               <p className="my-4" data-aos="fade-right" data-aos-duration="800">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor.
+                Knowledge in following technologies:
               </p>
               <div
                 className="professional-skills d-flex flex-wrap"

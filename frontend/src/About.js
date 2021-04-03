@@ -87,7 +87,9 @@ const About = () => {
                 data-aos="fade-right"
                 data-aos-duration="1000"
               >
-                <p>{portfolio && portfolio.aboutSummary}</p>
+                <p style={{ whiteSpace: "pre-wrap" }}>
+                  {portfolio && portfolio.aboutSummary}
+                </p>
               </div>
               <div
                 className="social-profiles"
