@@ -11,23 +11,23 @@ const Footer = () => {
           <Col md={6}>
             <div className="rights mt-5">
               <a href="/" class="active navbar-brand mb-3">
-                Portfolio
+                Manvir Portfolio
               </a>
-              <p>
+              {/* <p>
                 Some example text to build on the card make up the bulk of the
                 card's content.Some example text to build on the card make up
                 the bulk of the card's content. Some example text to build on
                 the card make up the bulk of the card's content.Some example
                 text to build on the card make up the bulk of the card's
                 content.
-              </p>
-              <h6>This website builing Stack: </h6>
+              </p> */}
+              <h6>This website building Stack: </h6>
               <ul className="pl-4 mt-3">
                 <li>React</li>
                 <li>Node js</li>
                 <li>Express js</li>
                 <li>Mongo DB</li>
-                <li>SCSS</li>
+                <li>SASS</li>
                 <li>Redux for state management</li>
                 <li>AOS package for scrol animations</li>
               </ul>

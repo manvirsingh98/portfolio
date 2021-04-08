@@ -74,7 +74,7 @@ const About = () => {
             {error && <h4>{error}</h4>}
             <div className="about-me pt-3 pl-5">
               <div
-                className="about-me-title mb-5"
+                className="about-me-title mb-4"
                 data-aos="fade-right"
                 data-aos-duration="1000"
               >
@@ -83,7 +83,7 @@ const About = () => {
                 </h3>
               </div>
               <div
-                className="about-me-desc mb-5"
+                className="about-me-desc"
                 data-aos="fade-right"
                 data-aos-duration="1000"
               >
@@ -100,7 +100,9 @@ const About = () => {
                 {socialProfilesError && <h4>{socialProfilesError}</h4>}
                 {socialProfiles.map((socialProfile, idx) => (
                   <div className="social-profile-icon" key={idx}>
-                    <i className={` ${socialProfile.icon}`} />
+                    <a href={socialProfile.url}>
+                      <i className={` ${socialProfile.icon}`} />
+                    </a>
                   </div>
                 ))}
               </div>

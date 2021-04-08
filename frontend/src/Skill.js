@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import * as Scroll from "react-scroll";
+import { Link } from "react-scroll";
 import { Col, Container, Row, Alert } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { listSkills } from "./actions/skillsActions";
@@ -72,7 +74,17 @@ const SkillSection = () => {
                 data-aos="fade-right"
                 data-aos-duration="1000"
               >
-                <button className="btn btn-md btn-secondary ">Hire me</button>
+                <Link
+                  className="btn btn-md btn-secondary"
+                  activeClass="active"
+                  to="footer"
+                  spy={true}
+                  smooth={true}
+                  duration={800}
+                  offset={-50}
+                >
+                  Hire me
+                </Link>
               </div>
             </div>
           </Col>
