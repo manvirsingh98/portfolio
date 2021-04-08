@@ -33,7 +33,14 @@ const HeroSection = () => {
               {portfolio && portfolio.summary}
             </p>
             <div className="cta-btns">
-              <button className="btn btn-md btn-secondary mr-4">Resume</button>
+              <a
+                href="http://localhost:5000/uploads/Manvir-Singh.pdf"
+                download="Manvir"
+                target="_blank"
+                className="btn btn-md btn-secondary mr-4"
+              >
+                Resume
+              </a>
               <Link
                 className="btn btn-md btn-secondary mr-4"
                 activeClass="active"
