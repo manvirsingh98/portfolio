@@ -1,24 +1,28 @@
 import React, { useState } from "react";
-import { Container, Form, Col } from "react-bootstrap";
+import { Container, Form, Col, Alert } from "react-bootstrap";
+import axios from "axios";
 
 const ContactSection = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setlastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isSend, setIsSend] = useState(false);
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  //   const data = {
-  //     firstName,
-  //     lastName,
-  //     email,
-  //     message,
-  //   };
+    const subject = "Portfolio Email";
 
-  //   console.log(data);
-  // };
+    const data = {
+      name: firstName + " " + lastName,
+      subject,
+      email,
+      message,
+    };
+
+    await axios.post("/email", data).then((response) => setIsSend(true));
+  };
 
   return (
     //    <!-- ======= Contact Section ======= -
@@ -29,7 +33,10 @@ const ContactSection = () => {
       <Container>
         <div className="contact-form text-left">
           {/* <h3 className="mb-4">Fill all the fields of form</h3> */}
-          <form>
+          {isSend && (
+            <Alert variant="success">Your Message Successfully Sent!</Alert>
+          )}
+          <form onSubmit={handleSubmit}>
             <Form.Group as={Col} controlId="formName">
               <Form.Label>First Name</Form.Label>
               <Form.Control

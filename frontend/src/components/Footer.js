@@ -33,7 +33,8 @@ const Footer = () => {
               </ul>
             </div>
             <h3>
-              Click here to send me <a href="mail">email</a>
+              Click here to send me{" "}
+              <a href="mailto:er.manvirsingh98@gmail.com">email</a>
             </h3>
           </Col>
           <Col md={6}>

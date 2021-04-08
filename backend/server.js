@@ -9,6 +9,7 @@ import connectDB from "./config/db.js";
 
 import userRoutes from "./routes/userRoutes.js";
 import portfolioRoutes from "./routes/portfolioRoutes.js";
+import emailRoutes from "./routes/emailRoutes.js";
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ app.use(express.json());
 
 app.use("/api/users", userRoutes);
 app.use("/api/portfolio", portfolioRoutes);
+app.use("/email", emailRoutes);
 
 const __dirname = path.resolve();
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
