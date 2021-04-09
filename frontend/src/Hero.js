@@ -4,6 +4,8 @@ import { Link } from "react-scroll";
 import { useDispatch, useSelector } from "react-redux";
 import { getPortfolio } from "./actions/portfolioActions";
 
+import resume from "./assets/Manvir-Singh.pdf";
+
 const HeroSection = () => {
   const dispatch = useDispatch();
 
@@ -34,7 +36,7 @@ const HeroSection = () => {
             </p>
             <div className="cta-btns">
               <a
-                href="http://localhost:5000/uploads/Manvir-Singh.pdf"
+                href={resume}
                 download="Manvir"
                 target="_blank"
                 className="btn btn-md btn-secondary mr-4"

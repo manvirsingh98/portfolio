@@ -7,9 +7,10 @@ dotenv.config();
 const transport = {
   //all of the configuration for making a site send an email.
 
+  pool: true,
   host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
+  port: 465,
+  secure: true, // use TLS
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASS,
