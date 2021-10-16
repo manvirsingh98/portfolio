@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Form, Col, Alert } from "react-bootstrap";
 import axios from "axios";
+import { send } from "emailjs-com";
 
 const ContactSection = () => {
   const [firstName, setFirstName] = useState("");
@@ -21,7 +22,20 @@ const ContactSection = () => {
       message,
     };
 
-    await axios.post("/email", data).then((response) => setIsSend(true));
+    // await axios.post("/email", data).then((response) => setIsSend(true));
+    send(
+      "service_nhsmevm",
+      "template_0b3zzxb",
+      data,
+      "user_GcGR77HXtTGcg09CiHbk7"
+    )
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        setIsSend(true);
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+      });
   };
 
   return (
